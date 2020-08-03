@@ -53,6 +53,7 @@ const render = () => {
         $li.on("click", '.removeSite', (e) => {
             e.stopPropagation() //阻止冒泡
 
+           
             hashTable.splice(index, 1)
             $('.siteList').find('li.newSite').remove()
             string = JSON.stringify(hashTable) //转换成字符串
@@ -104,7 +105,9 @@ $("#newSite").on("click", null, () => {
 $(document).on('keypress', (e) => {
     const {key} = e
     console.log(e.key)
-  
+    $('.searchForm').on("keypress", (e) => {
+        e.stopPropagation()}) //阻止输入时，键盘事件冒泡
+
     for (let i = 0; i < hashTable.length; i++) {
         if (hashTable[i].logo.toLowerCase() === key) {
             window.open(hashTable[i].url)

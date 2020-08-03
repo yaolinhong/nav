@@ -212,6 +212,9 @@ $("#newSite").on("click", null, function () {
 $(document).on('keypress', function (e) {
   var key = e.key;
   console.log(e.key);
+  $('.searchForm').on("keypress", function (e) {
+    e.stopPropagation();
+  }); //阻止输入时，键盘事件冒泡
 
   for (var i = 0; i < hashTable.length; i++) {
     if (hashTable[i].logo.toLowerCase() === key) {
@@ -227,4 +230,4 @@ $(document).on('keypress', function (e) {
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.b57f0f30.js.map
+//# sourceMappingURL=main.c6c5de6d.js.map
