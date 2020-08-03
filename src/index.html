@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="zh-CN">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <!-- 淘宝 -->
+    <title>极简前端导航网站</title>
+    <style type="text/css">
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <globalHeader>
+        <!-- 表单实现引用百度搜索功能 -->
+        <form class="searchForm" method="get" action="https://www.baidu.com/s">
+            <input name="wd" type="text">
+            <button type="submit" class="searchButton"><svg class="icon">
+                    <use xlink:href="#icon-sousuo"></use>
+                </svg></button>
+        </form>
+
+    </globalHeader>
+    <globalMain>
+        <ul>
+            <div id="wrapper">
+            <div class="fixedSite">
+                <li class="oldSite"><a href="https://cn.vuejs.org/">
+                    <div class="site">
+                        <div class="logo"><img src="/image/logo1.png" alt="Vue"></div>
+                        <span>vuejs.org</span>
+                    </div>
+                </a>
+            </li>
+            <li class="oldSite"><a href="https://reactjs.org/">
+                    <div class="site">
+                        <div class="logo"><img src="/image/logo2.jpg" alt="react"></div>
+                        <span>reactjs.org</span>
+                    </div>
+                </a>
+            </li>
+            <li class="oldSite"><a href="https://nodejs.org/en/">
+                <div class="site">
+                    <div class="logo"><img id="nodejs" src="/image/nodejs.svg" alt="nodejs"></div>
+                    <span>nodejs.org</span>
+                </div>
+            </a>
+        </li>
+        <li class="oldSite"><a href="https://developer.mozilla.org/zh-CN/">
+            <div class="site">
+                <div class="logo"><img  src="/image/MDN.jpg" alt="MDN"></div>
+                <span>developer.mozilla.org</span>
+            </div>
+             
+        </a>
+    </li>
+            </div>
+            <div class="siteList">
+            </li>
+                <li class="last">
+                    <button class="site" id="newSite">
+                        <svg class="icon">
+                            <use xlink:href="#icon-add"></use>
+                        </svg>
+                        <span>添加自定义网站</span>
+                    </button>
+                </li>
+
+            </div>
+        </div>
+        </ul>
+    </globalMain>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="//at.alicdn.com/t/font_1981933_oe6a1tmg3fa.js"></script>
+</body>
+
+</html>
