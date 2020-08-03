@@ -209,12 +209,13 @@ $("#newSite").on("click", null, function () {
 
   localStorage.setItem('x', string); //大小写- -！
 });
+$('.searchForm').on("keypress", function (e) {
+  e.stopPropagation();
+}); //阻止输入时，键盘事件冒泡
+
 $(document).on('keypress', function (e) {
   var key = e.key;
   console.log(e.key);
-  $('.searchForm').on("keypress", function (e) {
-    e.stopPropagation();
-  }); //阻止输入时，键盘事件冒泡
 
   for (var i = 0; i < hashTable.length; i++) {
     if (hashTable[i].logo.toLowerCase() === key) {
@@ -230,4 +231,4 @@ $(document).on('keypress', function (e) {
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.c6c5de6d.js.map
+//# sourceMappingURL=main.2f110239.js.map

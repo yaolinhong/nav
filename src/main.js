@@ -102,12 +102,12 @@ $("#newSite").on("click", null, () => {
     localStorage.setItem('x', string) //大小写- -！
 })
 
+$('.searchForm').on("keypress", (e) => {
+    e.stopPropagation()}) //阻止输入时，键盘事件冒泡
+
 $(document).on('keypress', (e) => {
     const {key} = e
     console.log(e.key)
-    $('.searchForm').on("keypress", (e) => {
-        e.stopPropagation()}) //阻止输入时，键盘事件冒泡
-
     for (let i = 0; i < hashTable.length; i++) {
         if (hashTable[i].logo.toLowerCase() === key) {
             window.open(hashTable[i].url)
